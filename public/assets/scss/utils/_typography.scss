@@ -1,0 +1,32 @@
+
+// font url
+
+$font-url: 'https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap';
+
+// font family
+$font-family: (
+    'ff': (
+        'body': "'Public Sans', sans-serif",
+        'heading': "'Public Sans', sans-serif",
+        'poppins':"'Public Sans', sans-serif",
+        'p': "'Public Sans', sans-serif",
+        'fontawesome': '"Font Awesome 6 Pro"',
+    )
+);
+
+// Add font-optical-sizing for Public Sans
+* {
+    font-optical-sizing: auto;
+}
+
+
+
+// font size
+$font-size: (
+    'fz': (
+        'body': 16px,
+        'p': 16px,
+    )
+);
+
+
