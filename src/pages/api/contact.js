@@ -31,18 +31,17 @@ export default async function handler(req, res) {
 
   const recipient = process.env.CONTACT_RECIPIENT || process.env.SMTP_USER;
 
+  const actionLabel = action === 'investor' ? 'Investor Contact' : 'Demo Request';
+
   // Determine subject based on action
-  const subject =
-    action === 'investor'
-      ? `[Investor Contact] ${name} from ${company}`
-      : `[Demo Request] ${name} from ${company}`;
+  const subject = `[${actionLabel}] ${name} from ${company}`;
 
   // Build email content
   const emailContent = `
 Name: ${name}
 Company: ${company}
 Email: ${email}
-Action: ${action === 'investor' ? 'Investor Contact' : 'Demo Request'}
+Action: ${actionLabel}
 
 Message:
 ${message}

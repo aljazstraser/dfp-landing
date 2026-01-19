@@ -11,11 +11,20 @@ const ContactForm = () => {
     setSubmitStatus(null);
     setStatusMessage('');
 
+    // Determine which submit button triggered the form submit (Request Demo vs Investor Contact)
+    // This is more reliable than expecting FormData(form) to include the clicked submit button.
+    const submitter = e?.nativeEvent?.submitter;
+    const actionFromSubmitter = submitter?.getAttribute?.('value') || submitter?.value;
+
     const formData = new FormData(e.target);
     const formObject = {};
     formData.forEach((value, key) => {
       formObject[key] = value;
     });
+
+    if (actionFromSubmitter) {
+      formObject.action = actionFromSubmitter;
+    }
 
     try {
       const response = await fetch('/api/contact', {
