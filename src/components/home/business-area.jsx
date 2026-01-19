@@ -89,6 +89,18 @@ const BusinessArea = () => {
                #platform-section .tp-business-title-wrapper > p::after {
                   background: #5b9bd4 !important;
                }
+               #platform-section .tp-contact-btn .tp-btn {
+                  background: #273141 !important;
+               }
+               #platform-section .tp-contact-btn .tp-btn::after {
+                  background: #48be64 !important;
+               }
+               #platform-section .tp-contact-btn .tp-btn::before {
+                  background: #48be64 !important;
+               }
+               #platform-section .tp-contact-btn .tp-btn:hover {
+                  color: var(--tp-common-white) !important;
+               }
                #platform-section .shape-2 {
                   width: 26px !important;
                   height: 26px !important;
@@ -196,6 +208,17 @@ const BusinessArea = () => {
                                  </SwiperSlide>
                               ))}
                            </Swiper>
+                        </div>
+
+                        <div className="tp-contact-btn mt-25" style={{ display: 'flex', justifyContent: 'center' }}>
+                           <a
+                              className="tp-btn"
+                              href="https://dragonfly-dev.omniopti.si/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                           >
+                              Platform Demo
+                           </a>
                         </div>
                      </div>
                   </div>
