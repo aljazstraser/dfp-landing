@@ -21,7 +21,6 @@ const dfpMenuItems = [
 
 
 const footer_two_content = {
-    bg_img: "/assets/img/services/home-3/service-bg.png",
     footer_widget: [
         "Parking permission",
         "Fire Service Noc",
@@ -46,7 +45,7 @@ const footer_two_content = {
 
 
 }
-const {bg_img, footer_widget, google_map, about_us, address, phone, email, footer_nav, mobile} = footer_two_content
+const { footer_widget, google_map, about_us, address, phone, email, footer_nav, mobile } = footer_two_content
 
 const FooterTwo = () => {
     const handleLogoClick = (e) => {
@@ -108,7 +107,7 @@ const FooterTwo = () => {
                     opacity: 1 !important;
                 }
             `}</style>
-            <footer className="tp-footer-2-area p-relative" style={{backgroundImage: `url(${bg_img})`, backgroundColor: '#364152'}}>
+            <footer className="tp-footer-2-area p-relative" style={{ backgroundColor: '#364152' }}>
                 <div className="tp-footer-overlay">
                     <div className="tp-footer-2-shape">
                         <Image src={footer_shape_1} alt="theme-pure" />

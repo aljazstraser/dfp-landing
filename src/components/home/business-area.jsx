@@ -20,6 +20,8 @@ import Link from 'next/link';
 import LineArrowSix from '@/src/svg/line-arrow-6';
 
 const BusinessArea = () => {
+    const platformDemoUrl = process.env.PLATFORM_DEMO || 'https://dragonfly-dev.omniopti.si/';
+
     // Generate image paths for UI screenshots
     const uiImages = Array.from({ length: 12 }, (_, i) => 
         `/assets/pics/dfp-ui-${String(i + 1).padStart(2, '0')}.webp`
@@ -213,7 +215,7 @@ const BusinessArea = () => {
                         <div className="tp-contact-btn mt-25" style={{ display: 'flex', justifyContent: 'center' }}>
                            <a
                               className="tp-btn"
-                              href="https://dragonfly-dev.omniopti.si/"
+                              href={platformDemoUrl}
                               target="_blank"
                               rel="noopener noreferrer"
                            >
