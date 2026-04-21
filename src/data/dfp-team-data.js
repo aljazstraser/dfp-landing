@@ -2,7 +2,7 @@
 import sissel from "@assets/img/dfp-team/sissel.png";
 import bruno from "@assets/img/dfp-team/bruno.png";
 import nicolas from "@assets/img/dfp-team/nicolas.png";
-import adrien from "@assets/img/dfp-team/adrien.png";
+import clement from "@assets/img/dfp-team/clement.png";
 import dennis from "@assets/img/dfp-team/dennis.png";
 import jules from "@assets/img/dfp-team/jules.png";
 import olav from "@assets/img/dfp-team/olav.png";
@@ -63,15 +63,15 @@ const dfp_team_data = [
     },
     {
         id: 4,
-        name: "Adrien Bosset",
+        name: "Clément Aubert",
         job_title: "CFO",
         email: "contact@dragonflypads.com",
-        img: adrien,
+        img: clement,
         social: {
-            facebook: "https://www.facebook.com/adrien.bosset",
-            twitter: "https://twitter.com/adrien_bosset",
-            linkedin: "https://linkedin.com/in/adrien-bosset",
-            instagram: "https://instagram.com/adrien_bosset",
+            facebook: "https://www.facebook.com/clement.aubert",
+            twitter: "https://twitter.com/clement_aubert",
+            linkedin: "https://linkedin.com/in/clement-aubert",
+            instagram: "https://instagram.com/clement_aubert",
         }
     },
     {
