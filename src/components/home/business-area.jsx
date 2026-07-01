@@ -20,7 +20,7 @@ import Link from 'next/link';
 import LineArrowSix from '@/src/svg/line-arrow-6';
 
 const BusinessArea = () => {
-    const platformDemoUrl = process.env.PLATFORM_DEMO || 'https://dragonfly-dev.omniopti.si/';
+    const platformDemoUrl = process.env.PLATFORM_DEMO || 'https://app.dragonflypads.com/';
 
     // Generate image paths for UI screenshots
     const uiImages = Array.from({ length: 12 }, (_, i) => 
