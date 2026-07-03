@@ -1,12 +1,12 @@
 // DragonFlyPads Team Data
-import sissel from "@assets/img/dfp-team/sissel.png";
-import bruno from "@assets/img/dfp-team/bruno.png";
-import nicolas from "@assets/img/dfp-team/nicolas.png";
-import clement from "@assets/img/dfp-team/clement.png";
-import dennis from "@assets/img/dfp-team/dennis.png";
-import jules from "@assets/img/dfp-team/jules.png";
-import olav from "@assets/img/dfp-team/olav.png";
-import martin from "@assets/img/dfp-team/martin.png";
+import sissel from "@assets/img/dfp-team/sissel_gray.jpg";
+import bruno from "@assets/img/dfp-team/bruno_gray.jpg";
+import nicolas from "@assets/img/dfp-team/nicolas_gray.jpg";
+import clement from "@assets/img/dfp-team/clement_gray.jpg";
+import dennis from "@assets/img/dfp-team/dennis_gray.jpg";
+import jules from "@assets/img/dfp-team/jules_gray.jpg";
+import olav from "@assets/img/dfp-team/olav_gray.jpg";
+import martin from "@assets/img/dfp-team/martin_gray.jpg";
 
 const dfp_team_data = [
     {

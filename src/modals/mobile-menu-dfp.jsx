@@ -1,102 +1,62 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import menu_data from '@/src/layout/headers/menu-data';
 import HomeIcon from '@/src/svg/home-icon';
 import Logo from "@assets/img/logo/logo.png";
+import { navigateHome, navigateToSection } from '@/src/utils/scroll-to-section';
 
 const MobileMenuDfp = ({ mobileMenuOpen, setMobileMenuOpen }) => {
-  // Menu item handlers (same as NavMenuDfp)
+  const router = useRouter();
+
   const handleHomeClick = (e) => {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigateHome(router);
     setMobileMenuOpen(false);
   };
 
   const handlePlatformClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#platform-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    }
+    navigateToSection('platform-section', router);
     setMobileMenuOpen(false);
   };
 
   const handleBusinessModelClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#business-model-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    }
+    navigateToSection('business-model-section', router);
     setMobileMenuOpen(false);
   };
 
   const handleTechnologyClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#technology-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    }
+    navigateToSection('technology-section', router);
     setMobileMenuOpen(false);
   };
 
   const handleUseCasesClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#use-cases-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    }
+    navigateToSection('use-cases-section', router);
     setMobileMenuOpen(false);
   };
 
   const handlePartnersClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#partners-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    }
+    navigateToSection('partners-section', router);
     setMobileMenuOpen(false);
   };
 
   const handleCompanyClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#company-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    }
+    navigateToSection('company-section', router);
     setMobileMenuOpen(false);
   };
 
   const handleContactClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#contact-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
-    }
+    navigateToSection('contact-section', router);
     setMobileMenuOpen(false);
-  };
-  
+  };  
   // Prevent body scroll when menu is open
   useEffect(() => {
     if (mobileMenuOpen) {
@@ -428,7 +388,7 @@ const MobileMenuDfp = ({ mobileMenuOpen, setMobileMenuOpen }) => {
           <div className="mobile-menu-dfp__logo">
             <a href="#" onClick={(e) => {
               e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
+              navigateHome(router);
               setMobileMenuOpen(false);
             }}>
               <Image src={Logo} alt="DragonFlyPads" style={{height: '46px', width: 'auto'}} />

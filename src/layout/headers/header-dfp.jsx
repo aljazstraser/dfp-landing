@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import NavMenuDfp from './nav-menu-dfp';
 import LangLogo from "@assets/img/logo/logo-lang.png";
 // Removed useSticky - header is now always fixed
@@ -9,8 +10,10 @@ import HomeIcon from '@/src/svg/home-icon';
 import SearchPopup from '@/src/modals/search-popup';
 import MobileMenuDfp from '@/src/modals/mobile-menu-dfp';
 import Logo from "@assets/img/logo/logo.png";
+import { navigateHome } from '@/src/utils/scroll-to-section';
 
 const HeaderDfp = () => {
+   const router = useRouter();
    // Header is always fixed - top section hides on scroll
    const langToggleRef = useRef(null);
    const [searchOpen, setSearchOpen] = useState(false)
@@ -479,7 +482,7 @@ const HeaderDfp = () => {
                                  <div className="tp-header-logo">
                                     <a href="#" onClick={(e) => {
                                        e.preventDefault();
-                                       window.scrollTo({ top: 0, behavior: 'smooth' });
+                                       navigateHome(router);
                                     }}>
                                        <Image src={Logo} alt="theme-pure" style={{height: '46px', width: 'auto'}} />
                                     </a>

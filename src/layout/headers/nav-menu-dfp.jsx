@@ -1,117 +1,51 @@
 import Link from "next/link";
 import React from "react";
+import { useRouter } from "next/router";
 import HomeIcon from '@/src/svg/home-icon';
 import menu_data from "./menu-data";
+import { navigateHome, navigateToSection } from "@/src/utils/scroll-to-section";
 
 const NavMenuDfp = () => {
+  const router = useRouter();
+
   const handleHomeClick = (e) => {
     e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigateHome(router);
   };
 
   const handlePlatformClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#platform-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+    navigateToSection("platform-section", router);
   };
 
   const handleBusinessModelClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#business-model-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+    navigateToSection("business-model-section", router);
   };
 
   const handleTechnologyClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#technology-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+    navigateToSection("technology-section", router);
   };
 
   const handleUseCasesClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#use-cases-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+    navigateToSection("use-cases-section", router);
   };
 
   const handlePartnersClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#partners-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+    navigateToSection("partners-section", router);
   };
 
   const handleCompanyClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#company-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+    navigateToSection("company-section", router);
   };
 
   const handleContactClick = (e) => {
     e.preventDefault();
-    const element = document.querySelector('#contact-section');
-    if (element) {
-      const headerHeight = 160;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight;
-      
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-    }
+    navigateToSection("contact-section", router);
   };
 
   return (

@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import EmailAeroplan from '@/src/svg/email-aeroplan';
 import SocialLinks from '@/src/common/social-links';
+import { navigateHome, navigateToSection } from '@/src/utils/scroll-to-section';
 
 import  footer_shape_1 from "@assets/img/footer/shape-1.png";
 import  footer_logo from "@assets/img/logo/footer-logo.png";
@@ -48,49 +50,29 @@ const footer_two_content = {
 const { footer_widget, google_map, about_us, address, phone, email, footer_nav, mobile } = footer_two_content
 
 const FooterTwo = () => {
+    const router = useRouter();
+
     const handleLogoClick = (e) => {
         e.preventDefault();
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        navigateHome(router);
     };
 
     const handleFooterLinkClick = (e, link) => {
         e.preventDefault();
         
-        // Handle hash-based links (e.g., #platform-section)
         if (link.startsWith('#')) {
-            const element = document.querySelector(link);
-            if (element) {
-                const headerHeight = 160;
-                const elementPosition = element.offsetTop;
-                const offsetPosition = elementPosition - headerHeight;
-                
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
+            navigateToSection(link, router);
             return;
         }
         
-        // Handle different link types
         if (link === '/contact') {
             window.location.href = link;
             return;
         }
         
-        // Scroll to sections for CSS selector links (legacy support)
         const element = document.querySelector(link);
         if (element) {
-            const headerHeight = 160;
-            const elementPosition = element.offsetTop;
-            const offsetPosition = elementPosition - headerHeight;
-            
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
-        } else {
-            console.log('Element not found:', link);
+            navigateToSection(link.replace(/^#/, ''), router);
         }
     };
 
